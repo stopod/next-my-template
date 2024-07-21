@@ -16,10 +16,6 @@ export default function RootLayout({
   const sidebarItems = [
     { href: "/", label: "Home" },
     { href: "/sample-page", label: "Sample" },
-    { href: "/sample-page", label: "Sample" },
-    { href: "/sample-page", label: "Sample" },
-    { href: "/sample-page", label: "Sample" },
-    { href: "/sample-page", label: "Sample" },
   ];
 
   return (
@@ -27,9 +23,11 @@ export default function RootLayout({
       <body className="min-h-screen flex">
         <Sidebar items={sidebarItems} />
         <div className="flex flex-col flex-grow min-h-screen ml-64">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer name="sample footer" />
+          <Header className="fixed w-full z-10 h-16" />
+          <main className="flex-grow mt-16 mb-16 overflow-y-auto">
+            {children}
+          </main>
+          <Footer name="sample footer" className="fixed w-full bottom-0 h-16" />
         </div>
       </body>
     </html>

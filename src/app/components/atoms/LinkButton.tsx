@@ -1,14 +1,14 @@
 import Link from "next/link";
 
 type LinkButtonProps = {
-  location: string;
-  name: string;
+  href: string;
+  label: string;
 };
 
 const LinkButton = (props: LinkButtonProps) => {
   return (
     <Link
-      href={props.location}
+      href={props.href}
       className="bg-blue-500 
        hover:bg-blue-600 
       text-white 
@@ -24,7 +24,7 @@ const LinkButton = (props: LinkButtonProps) => {
         duration-150 
         ease-in-out"
     >
-      {props.name}
+      {props.label}
     </Link>
   );
 };

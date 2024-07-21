@@ -13,7 +13,6 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <>
       <aside
-        id="sidebar"
         className="
           w-64 bg-gray-100 h-screen fixed top-0 left-0 overflow-y-auto transition-transform
           translate-x-0
