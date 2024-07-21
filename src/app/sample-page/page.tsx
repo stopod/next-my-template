@@ -22,6 +22,15 @@ const SamplePage = () => {
             onChange={(e) => setContent(e.target.value)}
           />
         </div>
+        <div>
+          <button type="submit">決定</button>
+        </div>
+      </form>
+
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label className="text-gray-700 text-sm font-bold mb-4">入力</label>
+        </div>
         {/* ここがうまくできない */}
         <FormInput />
         <div>
