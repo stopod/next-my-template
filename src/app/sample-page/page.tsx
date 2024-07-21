@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import FormInput from "../components/atoms/FormInput";
+import FormField from "../components/molecules/FormField";
 
 const SamplePage = () => {
   const [content, setContent] = useState<string>("");
@@ -28,14 +28,15 @@ const SamplePage = () => {
       </form>
 
       <form onSubmit={handleSubmit}>
-        <div>
-          <label className="text-gray-700 text-sm font-bold mb-4">入力</label>
-        </div>
-        {/* ここがうまくできない */}
-        <FormInput />
-        <div>
-          <button type="submit">決定</button>
-        </div>
+        <FormField
+          label="入力"
+          id="content"
+          type="text"
+          name="content"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        />
+        <button type="submit">決定</button>
       </form>
     </div>
   );
